@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.postgresql.Driver
+      username: testkade
+      password: testkade
+      jdbc-url: jdbc:postgresql://localhost:5432/study

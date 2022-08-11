@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Slf4j
 @Configuration
-@RequiredArgsConstructor    // 생성자 주입
+@RequiredArgsConstructor
 public class JobConfig {
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
@@ -28,7 +28,7 @@ public class JobConfig {
     public Step printStep1() {
         return stepBuilderFactory.get("printStep1")
                 .tasklet((contribution, chunkContext) -> {
-                    log.info("print step 1");
+                    log.info("Step1");
                     return RepeatStatus.FINISHED;
                 }).build();
     }
